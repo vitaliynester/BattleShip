@@ -1,0 +1,6 @@
+.vs
+packages
+BattleShip.SERVER/bin
+BattleShip.SERVER/obj
+BattleShip.WPF/bin
+BattleShip.WPF/obj

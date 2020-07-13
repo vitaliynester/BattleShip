@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:BattleShip.WPF.Assets.Styles">
+    <Style x:Key="StandartLabelStyle" TargetType="{x:Type Label}">
+        <Setter Property="FontFamily" Value="{DynamicResource Coral Waves}"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource BluePrimaryBrush}"></Setter>
+        <Setter Property="FontSize" Value="25"></Setter>
+        <Setter Property="Background" Value="Transparent"></Setter>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+</ResourceDictionary>

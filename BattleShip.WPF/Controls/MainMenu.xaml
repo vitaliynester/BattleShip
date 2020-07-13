@@ -1,0 +1,105 @@
+﻿<Page x:Class="BattleShip.WPF.Controls.MainMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BattleShip.WPF.Controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="440" d:DesignWidth="1020"
+      Title="MainMenu">
+
+    <Grid>
+        <StackPanel 
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Orientation="Vertical">
+            
+            <Label
+            FontFamily="{DynamicResource Coral Waves}"
+            FontSize="50"
+            Foreground="{StaticResource BluePrimaryBrush}"
+            Content=" Морской бой"
+            Padding="0,23,0,0"/>
+            
+            <!--Play button-->
+            <Button Style="{DynamicResource StandartButtonStyle}" 
+                    Click="PlayVsAIButton_Click"
+                    Height="60"
+                    Width="170">
+                <Button.Background>
+                    <ImageBrush 
+                        ImageSource="/Assets/Images/Buttons/Circle_button_2.png"/>
+                </Button.Background>
+                <Button.Content>
+                    <Label Content="Одиночная" 
+                           Foreground="{StaticResource BluePrimaryBrush}"
+                           FontSize="40"/>
+                </Button.Content>
+            </Button>
+            
+            <!--Coop button-->
+            <Button Style="{DynamicResource StandartButtonStyle}" 
+                    Click="PlayWithFriendButton_Click"
+                    Height="60"
+                    Width="170">
+                <Button.Background>
+                    <ImageBrush 
+                        ImageSource="/Assets/Images/Buttons/Circle_button_3.png"/>
+                </Button.Background>
+                <Button.Content>
+                    <Label Content="Кооператив" 
+                           Foreground="{StaticResource BluePrimaryBrush}"
+                           FontSize="40"/>
+                </Button.Content>
+            </Button>
+            
+            <!--Multiplayer button-->
+            <Button Style="{DynamicResource StandartButtonStyle}" 
+                    Click="PlayOnlineButton_Click"
+                    Height="60"
+                    Width="170">
+                <Button.Background>
+                    <ImageBrush 
+                        ImageSource="/Assets/Images/Buttons/Circle_button_2.png"/>
+                </Button.Background>
+                <Button.Content>
+                    <Label Content="Онлайн" 
+                           Foreground="{StaticResource BluePrimaryBrush}"
+                           FontSize="40"/>
+                </Button.Content>
+            </Button>
+            
+            <!--History button-->
+            <Button Style="{DynamicResource StandartButtonStyle}" 
+                    Click="ReportHistoryButton_Click"
+                    Height="60"
+                    Width="170">
+                <Button.Background>
+                    <ImageBrush 
+                        ImageSource="/Assets/Images/Buttons/Circle_button_2.png"/>
+                </Button.Background>
+                <Button.Content>
+                    <Label Content="История" 
+                           Foreground="{StaticResource BluePrimaryBrush}"
+                           FontSize="40"/>
+                </Button.Content>
+            </Button>
+
+            <!--Exit button-->
+            <Button Style="{DynamicResource StandartButtonStyle}" 
+                    Click="ExitButton_Click"
+                    Height="60"
+                    Width="170">
+                <Button.Background>
+                    <ImageBrush 
+                        ImageSource="/Assets/Images/Buttons/Circle_button_3.png"/>
+                </Button.Background>
+                <Button.Content>
+                    <Label Content="Выход" 
+                           Foreground="{StaticResource BluePrimaryBrush}"
+                           FontSize="40"/>
+                </Button.Content>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>

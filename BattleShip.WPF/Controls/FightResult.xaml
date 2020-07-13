@@ -1,0 +1,60 @@
+﻿<Page x:Class="BattleShip.WPF.Controls.FightResult"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BattleShip.WPF.Models"
+      mc:Ignorable="d" 
+      d:DesignHeight="440" d:DesignWidth="1020"
+      Title="FightResult">
+
+    <Grid>
+        <!--Header-->
+        <Label 
+            Style="{DynamicResource StandartLabelStyle}"
+            Content="Бой окончен!"
+            FontSize="50"
+            Foreground="Gray"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"/>
+        <!-- Result message -->
+        <TextBox
+            FontFamily="{DynamicResource Coral Waves}"
+            SelectionBrush="Transparent"
+            IsReadOnly="True"
+            FontSize="50"            
+            HorizontalAlignment="Center"
+            HorizontalContentAlignment="Center"
+            VerticalAlignment="Center"
+            Background="Transparent"
+            Width="354"
+            Height="100"
+            Margin="0,-6,0,0">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource FightResultBoxStyle}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Source={x:Static local:Game.status}, Path=Result}" Value="{x:Static local:GameResult.Loss}">
+                            <Setter Property="Foreground" Value="Red"/>
+                            <Setter Property="Text" Value="Поражение, к сожалению"></Setter>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Source={x:Static local:Game.status}, Path=Result}" Value="{x:Static local:GameResult.Win}">
+                            <Setter Property="Foreground" Value="Green"/>
+                            <Setter Property="Text" Value="Победа!"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <!--Button-->
+        <Button
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Click="MainMenu_Click"
+            Height="60"
+            Width="300"
+            FontSize="50"
+            Content="Главное меню"
+            Margin="0,20"
+            Style="{DynamicResource StandartButtonStyle}"/>
+    </Grid>
+</Page>

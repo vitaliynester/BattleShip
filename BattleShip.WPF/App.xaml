@@ -1,0 +1,20 @@
+﻿<Application x:Class="BattleShip.WPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BattleShip.WPF"
+             StartupUri="/MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Assets/Styles/MainStyle.xaml"/>
+                <ResourceDictionary Source="Assets/Styles/CellStyle.xaml"/>
+                <ResourceDictionary Source="Assets/Styles/FieldStyle.xaml"/>
+                <ResourceDictionary Source="Assets/Styles/ButtonStyle.xaml"/>
+                <ResourceDictionary Source="Assets/Styles/CountShipStyle.xaml"/>
+                <ResourceDictionary Source="Assets/Styles/FightResultBoxStyle.xaml"/>
+                <ResourceDictionary Source="Assets/Styles/TextBoxInputStyle.xaml"/>
+                <ResourceDictionary Source="Assets/Styles/CircleButtonStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
